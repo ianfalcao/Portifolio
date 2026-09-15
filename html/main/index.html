@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ian Falcão | Segurança da Informação e Tecnologia</title>
+    <meta name="description" content="Portfólio de Ian Falcão, estudante de Ciência da Computação na UNIPE. Competências em segurança da informação, análise de logs, Linux, suporte técnico e desenvolvimento.">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navegação -->
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="logo">root@ian:~#</div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" hidden>Menu</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">/sobre</a></li>
+            <li><a href="#skills">/skills</a></li>
+            <li><a href="#projects">/projetos</a></li>
+            <li><a href="#certificates">/certificados</a></li>
+            <li><a href="#contact">/contato</a></li>
+        </ul>
+    </nav>
+
+    <!-- Cena em camadas: a rolagem conduz a passagem até a apresentação. -->
+    <header class="hero-scene" data-parallax data-cinematic>
+        <div class="scene-viewport">
+            <img class="scene-layer scene-sky" src="../../img/cenario-horizonte.svg" alt="" aria-hidden="true" data-depth="0.08">
+            <div class="hero-content scene-title" data-depth="-0.65">
+                <p class="hero-eyebrow">SEGURANÇA · CÓDIGO · CONEXÕES</p>
+                <h1>Ian Falcão<span class="title-dot">.</span></h1>
+                <div class="terminal-prompt" aria-label="Segurança da informação, análise de logs, Linux e desenvolvimento web">
+                    <span id="typewriter-text" aria-hidden="true">Segurança da informação</span><span class="blink-cursor" aria-hidden="true">_</span>
+                </div>
+                <a href="#about" class="btn-cyber">Explore meu portfólio ↓</a>
+            </div>
+            <img class="scene-layer scene-mountains" src="../../img/cenario-montanhas.svg" alt="" aria-hidden="true" data-depth="-0.18">
+            <div class="scene-layer scene-foreground" aria-hidden="true" data-depth="-0.42"><img src="../../img/cenario-primeiro-plano.svg" alt=""></div>
+            <div class="scene-caption"><span>01 / EXPLORAR</span><span>Role para descobrir ↓</span></div>
+        </div>
+    </header>
+
+    <!-- Sessão Sobre -->
+    <section id="about" class="container">
+        <div class="section-header">
+            <h2>01. Sobre mim</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Sou estudante de <strong>Ciência da Computação na UNIPE</strong>, com formação de 2026 a 2029. Meu foco é desenvolver conhecimentos em <strong>segurança da informação e análise de logs</strong>, conectando os estudos à prática em projetos.</p>
+                <p>Minhas competências incluem Linux, redes de computadores, suporte técnico e diagnóstico de hardware. Também trabalho com conhecimentos de Python, Java, desenvolvimento web e MySQL para ampliar minha base em tecnologia.</p>
+            <aside class="skill-card education-card" aria-label="Formação acadêmica">
+                <span class="status-indicator safe">GRADUAÇÃO</span>
+                <h3>Ciência da Computação</h3>
+                <p>UNIPE</p>
+                <p class="education-period">2026 – 2029</p>
+            </aside>
+            </div>
+            <div class="profile-column">
+                <figure class="portrait-frame">
+                    <img src="../../img/ian-falcao-perfil.png" alt="Retrato de Ian Falcão com camisa preta e óculos, sobre fundo azul-escuro" class="portrait-photo" width="1086" height="1448" loading="lazy" decoding="async">
+                    <figcaption>Ian Falcão <span>Ciência da Computação</span></figcaption>
+                </figure>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Skills -->
+    <section id="skills" class="container bg-darker">
+        <div class="section-header">
+            <h2>02. Capacidades & Conhecimentos</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Segurança & Infraestrutura</h3>
+                <ul>
+                    <li>Segurança da informação</li>
+                    <li>Análise de logs</li>
+                    <li>Linux e sistemas operacionais</li>
+                    <li>Redes de computadores</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Suporte de TI</h3>
+                <ul>
+                    <li>Suporte técnico e atendimento ao cliente</li>
+                    <li>Triagem de chamados</li>
+                    <li>Diagnóstico e suporte de hardware</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Desenvolvimento & Dados</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Desenvolvimento web</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sessão Projetos com Parallax Secundário -->
+    <section id="projects" class="parallax-bg-secondary" data-parallax>
+        <div class="parallax-layer project-network" data-depth="0.12" aria-hidden="true">
+            <img src="../../img/cenario-rede.svg" alt="" loading="lazy">
+        </div>
+        <div class="overlay"></div>
+        <div class="container projects-container">
+            <div class="section-header">
+                <h2>03. Logs de Projetos</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="status-indicator safe">SEGURANÇA</span>
+                        <h3>Log Analysis & Incident Correlation Lab</h3>
+                    </div>
+                    <p>Laboratório de análise e correlação de logs de acesso, autenticação, aplicação e firewall. Utiliza o terminal Linux e automação em Bash para investigar incidentes e detectar ameaças.</p>
+                    <div class="tech-stack">
+                        <span>Linux</span><span>Bash</span><span>Análise de logs</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/ianfalcao/Log-Analysis-Incident-Correlation-Lab" target="_blank" rel="noopener noreferrer">Ver laboratório no GitHub ↗</a>
+                </article>
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="status-indicator safe">WEB</span>
+                        <h3>Inkflow</h3>
+                    </div>
+                    <p>Plataforma web para descoberta e divulgação de tatuadores. Permite que artistas apresentem seus trabalhos e que clientes encontrem profissionais de acordo com seus estilos e preferências.</p>
+                    <div class="tech-stack">
+                        <span>Python</span><span>Java Script</span><span>Desenvolvimento web</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/ianfalcao/Inkflow" target="_blank" rel="noopener noreferrer">Ver Inkflow no GitHub ↗</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="certificates" class="container bg-darker">
+        <div class="section-header">
+            <h2>04. Certificados</h2>
+            <div class="divider"></div>
+        </div>
+        <div class="certificates-grid">
+            <article class="skill-card">
+                <span class="status-indicator safe">CONCLUÍDO · 2026</span>
+                <h3>Foundations of Log Analysis for Cyber Defense</h3>
+                <p>Red Team Leaders</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sessão de Contato -->
+    <footer id="contact" class="container">
+        <div class="section-header">
+            <h2>05. Estabelecer Conexão</h2>
+        </div>
+        <div class="contact-box">
+            <p>Vamos conversar sobre tecnologia, segurança da informação e novas oportunidades.</p>
+            <a href="mailto:ifalcao988@gmail.com" class="btn-cyber email-link">ifalcao988@gmail.com</a>
+            <div class="social-links" aria-label="Redes sociais">
+                <a href="https://www.linkedin.com/in/ian-falc%C3%A3o/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+                <a href="https://github.com/ianfalcao" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+            </div>
+        </div>
+        <div class="footer-credits">
+            <p>> Obrigado pela visita.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/script.js"></script>
+</body>
+</html>
