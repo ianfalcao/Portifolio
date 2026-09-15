@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scenes = Array.from(document.querySelectorAll('[data-parallax]'), section => ({
         section,
+        viewport: section.querySelector('.footer-viewport'),
         layers: Array.from(section.querySelectorAll('[data-depth]'))
     }));
     let frame = null;
@@ -79,9 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (reducedMotion.matches) return;
         // Todas as medições são feitas antes de atualizar os estilos.
         const positions = scenes.map(scene => scene.section.getBoundingClientRect());
+        const viewportHeights = scenes.map(scene => scene.viewport?.offsetHeight || window.innerHeight);
         scenes.forEach((scene, index) => {
             const rect = positions[index];
             if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+            if (scene.section.hasAttribute('data-rising')) {
+                // O rodapé permanece visível enquanto a rolagem move o cenário para cima.
+                const height = viewportHeights[index];
+                const distance = Math.max(1, rect.height - height);
+                const progress = Math.max(0, Math.min(1, -rect.top / distance));
+                scene.layers.forEach(layer => {
+                    const offset = progress * height * Number(layer.dataset.depth);
+                    layer.style.setProperty('--parallax-y', `${offset}px`);
+                });
+                return;
+            }
             if (scene.section.hasAttribute('data-cinematic')) {
                 const distance = Math.max(1, rect.height - window.innerHeight);
                 const progress = Math.max(0, Math.min(1, -rect.top / distance));
