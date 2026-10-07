@@ -1,0 +1,27 @@
+{
+  "name": "ian-cyber-portfolio",
+  "version": "1.0.0",
+  "description": "Ian Falcão's portfolio - Information Security and Technology",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ianfalcao/Portifolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "cybersecurity",
+    "information-security"
+  ],
+  "author": "Ian Falcão",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianfalcao/Portifolio/issues"
+  },
+  "homepage": "https://github.com/ianfalcao/Portifolio#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1"
+  }
+}
