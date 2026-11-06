@@ -416,34 +416,35 @@ a:focus-visible, button:focus-visible {
 /* Cenário local em planos independentes. */
 .hero-scene { height: 190svh; position: relative; background: #050505; }
 .scene-viewport { height: 100svh; min-height: 560px; position: sticky; top: 0; overflow: hidden; isolation: isolate; }
-.scene-layer { position: absolute; inset: 0; width: 100%; height: 115%; object-fit: cover; pointer-events: none; filter: grayscale(1) brightness(0.72); transform: translate3d(0, var(--parallax-y, 0px), 0) scale(var(--scene-scale, 1)); transform-origin: center 70%; }
-.scene-sky { z-index: 0; }
-.scene-mountains { z-index: 2; }
-.scene-foreground { z-index: 4; }
-.scene-viewport::after { content: ''; position: absolute; inset: 0; z-index: 5; pointer-events: none; background: #d71936; opacity: 0.62; mix-blend-mode: color; }
-.scene-title { position: absolute; inset: 0; z-index: 6; height: 70%; padding: 100px 20px 0; justify-content: center; transform: translate3d(0, var(--parallax-y, 0px), 0); opacity: var(--title-opacity, 1); }
+.scene-layer { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 115%; pointer-events: none; transform: translate3d(0, var(--parallax-y, 0px), 0) scale(var(--scene-scale, 1)); transform-origin: center 70%; }
+.scene-layer img, .project-network img, .footer-layer img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.scene-title { position: absolute; inset: 0; z-index: 3; height: 70%; padding: 100px 20px 0; justify-content: center; transform: translate3d(0, var(--parallax-y, 0px), 0); opacity: var(--title-opacity, 1); }
 .scene-title h1 { font-family: Arial, sans-serif; font-size: clamp(4rem, 10vw, 9rem); line-height: 1; letter-spacing: -0.065em; color: #f0e9e7; text-shadow: 0 4px 35px #180607aa; margin: 22px 0; }
 .title-dot { color: var(--cyber-blue); }
 .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.16em; color: #f08a8e; }
 .scene-title .terminal-prompt { font-size: clamp(1rem, 2vw, 1.3rem); margin-bottom: 18px; min-height: 2em; }
 .scene-title .btn-cyber { background: #071924c9; font-size: 0.75rem; }
-.scene-caption { position: absolute; bottom: 30px; left: 6%; right: 6%; display: flex; justify-content: space-between; gap: 20px; z-index: 6; color: #c5aaa8; font-size: 0.7rem; letter-spacing: 0.08em; opacity: var(--title-opacity, 1); }
+.scene-caption { position: absolute; bottom: 30px; left: 6%; right: 6%; display: flex; justify-content: space-between; gap: 20px; z-index: 5; color: #c5aaa8; font-size: 0.7rem; letter-spacing: 0.08em; opacity: var(--title-opacity, 1); }
 .hero-scene + #about { position: relative; background: #050505; }
 .profile-column { display: grid; gap: 24px; }
 .portrait-frame { border: 1px solid #6b3034; background: #171011; padding: 12px; }
 .portrait-photo { display: block; width: 100%; height: 400px; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; }
 .portrait-frame figcaption { padding: 16px 4px 4px; color: #fffffe; }
 .portrait-frame figcaption span { display: block; font-size: 0.75rem; color: #b7a3a0; margin-top: 4px; }
-.project-network img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .project-network img, .footer-layer img { filter: grayscale(1) brightness(0.72); }
 @media (max-width: 1000px) {
     .hero-scene { height: 165svh; }
     .scene-title { height: 65%; padding-top: 80px; }
     .scene-title h1 { font-size: clamp(3.5rem, 13vw, 6rem); }
     .hero-eyebrow { font-size: 0.6rem; letter-spacing: 0.1em; }
-    .scene-layer { width: 160%; max-width: none; left: -30%; }
+    .scene-layer { width: 100%; left: 0; }
     .scene-caption { font-size: 0.6rem; }
     .portrait-frame { max-width: 440px; width: 100%; }
+}
+@media (min-width: 1440px) {
+    .scene-layer { width: 108%; left: -4%; height: 120%; }
+    .scene-title h1 { font-size: clamp(9rem, 10vw, 11rem); }
+    .footer-layer { height: 140%; }
 }
 @media (prefers-reduced-motion: reduce) {
     .hero-scene { height: 100svh; min-height: 560px; }
@@ -451,9 +452,6 @@ a:focus-visible, button:focus-visible {
     .scene-layer, .scene-title { transform: none; }
     .scene-title, .scene-caption { opacity: 1; }
 }
-
-.scene-foreground img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.scene-foreground::after { content: ''; position: absolute; top: 99.9%; left: 0; width: 100%; height: 100vh; background: #050505; }
 
 /* Cenário de encerramento em toda a largura, com profundidades negativas. */
 .footer-scene {

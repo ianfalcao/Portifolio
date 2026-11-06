@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1400" fill="none">
+  <defs>
+    <linearGradient id="base" x1="400" y1="0" x2="400" y2="1400" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08080a"/>
+      <stop offset=".54" stop-color="#15090d"/>
+      <stop offset="1" stop-color="#24080e"/>
+    </linearGradient>
+    <radialGradient id="signal" cx="0" cy="0" r="1" gradientTransform="matrix(0 610 -490 0 400 930)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#c71935" stop-opacity=".32"/>
+      <stop offset="1" stop-color="#7e101f" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" stroke="#e53449" stroke-opacity=".11"/>
+      <circle cx="0" cy="0" r="1.5" fill="#ff5264" fill-opacity=".32"/>
+    </pattern>
+  </defs>
+  <path fill="url(#base)" d="M0 0h800v1400H0z"/>
+  <path fill="url(#signal)" d="M0 0h800v1400H0z"/>
+  <path fill="url(#grid)" d="M0 0h800v1400H0z" opacity=".55"/>
+  <g stroke="#f04458" stroke-opacity=".28">
+    <path d="m0 310 140-62 116 48 124-100 128 70 106-54 186 78M0 430l160-66 128 42 112-76 120 62 124-42 156 58"/>
+  </g>
+  <g fill="#fa5266">
+    <circle cx="140" cy="248" r="4"/><circle cx="256" cy="296" r="3"/>
+    <circle cx="380" cy="196" r="4"/><circle cx="508" cy="266" r="3"/>
+    <circle cx="614" cy="212" r="4"/><circle cx="800" cy="290" r="3"/>
+  </g>
+  <g stroke="#f04458" stroke-opacity=".24">
+    <circle cx="400" cy="850" r="128"/>
+    <circle cx="400" cy="850" r="205" stroke-dasharray="2 16"/>
+    <circle cx="400" cy="850" r="290" stroke-dasharray="1 22"/>
+    <path d="M400 535v630M85 850h630"/>
+    <path d="M400 850 0 1400M400 850 140 1400M400 850 270 1400M400 850h0v550M400 850l130 550M400 850l260 550M400 850l400 550"/>
+    <path d="M0 1010h800M0 1120h800M0 1260h800M0 1380h800" stroke-opacity=".18"/>
+  </g>
+  <g fill="#ff5264">
+    <circle cx="400" cy="850" r="5"/><circle cx="272" cy="850" r="3"/>
+    <circle cx="528" cy="850" r="3"/><circle cx="400" cy="722" r="3"/>
+    <circle cx="400" cy="978" r="3"/>
+  </g>
+  <g fill="#ff6575" fill-opacity=".48">
+    <circle cx="72" cy="108" r="2"/><circle cx="322" cy="144" r="1.5"/>
+    <circle cx="604" cy="118" r="2"/><circle cx="744" cy="516" r="1.5"/>
+    <circle cx="66" cy="646" r="1.5"/><circle cx="732" cy="1180" r="2"/>
+    <circle cx="106" cy="1310" r="1.5"/>
+  </g>
+</svg>

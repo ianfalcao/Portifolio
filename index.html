@@ -26,7 +26,10 @@
     <!-- Cena em camadas: a rolagem conduz a passagem até a apresentação. -->
     <header class="hero-scene" data-parallax data-cinematic>
         <div class="scene-viewport">
-            <img class="scene-layer scene-sky" src="img/cenario-horizonte.svg" alt="" aria-hidden="true" data-depth="0.08">
+            <picture class="scene-layer scene-sky" data-depth="0.08">
+                <source media="(max-width: 700px)" srcset="img/cenario-redteam-mobile.svg">
+                <img src="img/cenario-redteam.svg" alt="" aria-hidden="true">
+            </picture>
             <div class="hero-content scene-title" data-depth="-0.65">
                 <p class="hero-eyebrow">RED TEAM · PENTEST AUTORIZADO · LABS</p>
                 <h1>Ian Falcão<span class="title-dot">.</span></h1>
@@ -35,8 +38,6 @@
                 </div>
                 <a href="#projects" class="btn-cyber">Explorar laboratórios ↓</a>
             </div>
-            <img class="scene-layer scene-mountains" src="img/cenario-montanhas.svg" alt="" aria-hidden="true" data-depth="-0.18">
-            <div class="scene-layer scene-foreground" aria-hidden="true" data-depth="-0.42"><img src="img/cenario-primeiro-plano.svg" alt=""></div>
             <div class="scene-caption"><span>01 / ESCOPO AUTORIZADO</span><span>Role para explorar ↓</span></div>
         </div>
     </header>
@@ -108,9 +109,10 @@
 
     <!-- Laboratórios e projetos -->
     <section id="projects" class="parallax-bg-secondary" data-parallax>
-        <div class="parallax-layer project-network" data-depth="0.12" aria-hidden="true">
-            <img src="img/cenario-rede.svg" alt="" loading="lazy">
-        </div>
+        <picture class="parallax-layer project-network" data-depth="0.12" aria-hidden="true">
+            <source media="(max-width: 700px)" srcset="img/cenario-redteam-mobile.svg">
+            <img src="img/cenario-redteam.svg" alt="" loading="lazy" decoding="async">
+        </picture>
         <div class="overlay"></div>
         <div class="container projects-container">
             <div class="section-header">
@@ -171,15 +173,10 @@
     <!-- Cenário inferior: as camadas sobem durante a rolagem. -->
     <footer id="contact" class="footer-scene" data-parallax data-rising>
         <div class="container footer-viewport">
-            <div class="parallax-layer footer-layer" data-depth="-0.08" aria-hidden="true">
-                <img src="img/cenario-horizonte.svg" alt="" loading="lazy" decoding="async">
-            </div>
-            <div class="parallax-layer footer-layer" data-depth="-0.24" aria-hidden="true">
-                <img src="img/cenario-montanhas.svg" alt="" loading="lazy" decoding="async">
-            </div>
-            <div class="parallax-layer footer-layer" data-depth="-0.44" aria-hidden="true">
-                <img src="img/cenario-primeiro-plano.svg" alt="" loading="lazy" decoding="async">
-            </div>
+            <picture class="parallax-layer footer-layer" data-depth="-0.12" aria-hidden="true">
+                <source media="(max-width: 700px)" srcset="img/cenario-redteam-footer-mobile.svg">
+                <img src="img/cenario-redteam-footer.svg" alt="" loading="lazy" decoding="async">
+            </picture>
             <div class="footer-content">
                 <div class="section-header">
                     <h2>05. Vamos conversar</h2>
