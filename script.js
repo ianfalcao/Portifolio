@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const phrases = ['Segurança da informação', 'Análise de logs', 'Linux & Redes', 'Desenvolvimento web'];
+    const phrases = ['Red Team', 'Pentest autorizado', 'Linux & redes', 'Segurança ofensiva'];
     const text = document.getElementById('typewriter-text');
     let phraseIndex = 0;
     let charIndex = 0;
