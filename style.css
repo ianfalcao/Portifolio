@@ -435,7 +435,7 @@ a:focus-visible, button:focus-visible {
 .project-link { margin-top: 24px; }
 .project-link:hover, .social-links a:hover { color: var(--cyber-green); }
 .social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 24px; margin-top: 24px; }
-.email-link { text-transform: none; letter-spacing: 0; }
+.email-link { text-transform: none; letter-spacing: 0; margin-bottom: 8px; }
 
 /* Cenário local em planos independentes. */
 .hero-scene { height: 190svh; position: relative; background: #050505; }
