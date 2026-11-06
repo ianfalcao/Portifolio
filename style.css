@@ -77,13 +77,31 @@ body {
 }
 
 .parallax-bg-secondary {
+    background-color: var(--bg-color);
     background-image: repeating-linear-gradient(45deg, #050505 25%, transparent 25%, transparent 75%, #050505 75%, #050505), 
                       repeating-linear-gradient(45deg, #050505 25%, #0a0a0a 25%, #0a0a0a 75%, #050505 75%, #050505);
     background-position: 0 0, 10px 10px;
     background-size: 20px 20px;
 
     position: relative;
-
+}
+.parallax-bg-secondary::before,
+.parallax-bg-secondary::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: clamp(80px, 12vw, 180px);
+    z-index: 2;
+    pointer-events: none;
+}
+.parallax-bg-secondary::before {
+    top: 0;
+    background: linear-gradient(to bottom, var(--bg-color), transparent);
+}
+.parallax-bg-secondary::after {
+    bottom: 0;
+    background: linear-gradient(to top, var(--bg-color), transparent);
 }
 
 .overlay {
@@ -167,7 +185,13 @@ body {
 }
 
 .bg-darker {
-    background-color: var(--bg-darker);
+    background: linear-gradient(
+        180deg,
+        var(--bg-color) 0%,
+        var(--bg-darker) 14%,
+        var(--bg-darker) 86%,
+        var(--bg-color) 100%
+    );
 }
 
 .section-header {
@@ -265,7 +289,7 @@ body {
 /* Projetos */
 .projects-container {
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .projects-grid {
@@ -415,6 +439,7 @@ a:focus-visible, button:focus-visible {
 
 /* Cenário local em planos independentes. */
 .hero-scene { height: 190svh; position: relative; background: #050505; }
+.hero-scene::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; z-index: 8; height: clamp(140px, 18vw, 260px); pointer-events: none; background: linear-gradient(to bottom, transparent, var(--bg-color)); }
 .scene-viewport { height: 100svh; min-height: 560px; position: sticky; top: 0; overflow: hidden; isolation: isolate; }
 .scene-layer { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 115%; pointer-events: none; transform: translate3d(0, var(--parallax-y, 0px), 0) scale(var(--scene-scale, 1)); transform-origin: center 70%; }
 .scene-layer img, .project-network img, .footer-layer img { display: block; width: 100%; height: 100%; object-fit: cover; }
@@ -425,13 +450,13 @@ a:focus-visible, button:focus-visible {
 .scene-title .terminal-prompt { font-size: clamp(1rem, 2vw, 1.3rem); margin-bottom: 18px; min-height: 2em; }
 .scene-title .btn-cyber { background: #071924c9; font-size: 0.75rem; }
 .scene-caption { position: absolute; bottom: 30px; left: 6%; right: 6%; display: flex; justify-content: space-between; gap: 20px; z-index: 5; color: #c5aaa8; font-size: 0.7rem; letter-spacing: 0.08em; opacity: var(--title-opacity, 1); }
-.hero-scene + #about { position: relative; background: #050505; }
+.hero-scene + #about { position: relative; background: linear-gradient(to bottom, #17090d 0%, var(--bg-color) 240px); }
 .profile-column { display: grid; gap: 24px; }
 .portrait-frame { border: 1px solid #6b3034; background: #171011; padding: 12px; }
 .portrait-photo { display: block; width: 100%; height: 400px; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; }
 .portrait-frame figcaption { padding: 16px 4px 4px; color: #fffffe; }
 .portrait-frame figcaption span { display: block; font-size: 0.75rem; color: #b7a3a0; margin-top: 4px; }
-.project-network img, .footer-layer img { filter: grayscale(1) brightness(0.72); }
+.project-network img { filter: brightness(1.08) saturate(1.08); }
 @media (max-width: 1000px) {
     .hero-scene { height: 165svh; }
     .scene-title { height: 65%; padding-top: 80px; }
@@ -476,6 +501,7 @@ a:focus-visible, button:focus-visible {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: brightness(1.28) saturate(1.14);
 }
 .footer-viewport::before {
     content: '';
@@ -484,7 +510,7 @@ a:focus-visible, button:focus-visible {
     z-index: 1;
     pointer-events: none;
     background: #d71936;
-    opacity: 0.62;
+    opacity: 0.3;
     mix-blend-mode: color;
 }
 .footer-viewport::after {
@@ -493,7 +519,7 @@ a:focus-visible, button:focus-visible {
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background: linear-gradient(to bottom, #000 0%, #05050566 25%, #05050580 75%, #050505 100%);
+    background: linear-gradient(to bottom, var(--bg-color) 0%, rgba(10, 9, 9, 0.55) 12%, transparent 30%, transparent 78%, rgba(10, 9, 9, 0.2) 100%);
 }
 .footer-content { position: relative; z-index: 2; min-width: 0; }
 .footer-scene .footer-credits { color: #a0bec4; }
